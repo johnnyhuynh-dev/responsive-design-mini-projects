@@ -1,0 +1,359 @@
+<style>
+@import "https://fonts.googleapis.com/css?family=Lato:400,700";
+
+* {
+    box-sizing: border-box;
+    background: #EEEEEE;
+}
+
+h3, p, ul, footer, .nav-bar {
+    font-family: Lato;
+}
+
+#intro {
+    font-size: x-large;
+    text-align: center;
+    margin-top: 70px;
+    font-weight: 600;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 5px 0;
+}
+
+li {
+    margin: 10px auto;
+    text-align: center;
+}
+
+
+.nav-bar {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-link {
+    margin: 10px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+#header-img {
+    display: block;
+    margin-left: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#email {
+    width: 250px;
+    height: 30px;
+    padding-left: 5px;
+    background: white;
+}
+
+.button {
+    margin-top: 15px;
+    padding: 5px;
+    width: 150px;
+    background-color: #ffd324;
+    font-weight: 900;
+    border-style: none;
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: orange;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+
+
+.next-to-icon {
+    margin-left: 20px;
+    width: 80%;
+    max-width: 800px;
+    font-size: large;
+}
+
+
+
+#video {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+}
+
+
+
+.col {
+    border-style: solid;
+    border-width: thin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    max-width: 300px;
+    margin: 10px;
+
+}
+
+.item {
+    font-size: large;
+    font-family: Lato;
+    font-weight: 700;
+    margin-top: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    text-align: center;
+    background-color: #d4d4d4;
+}
+
+.price {
+    font-size: x-large;
+    font-family: Lato;
+    font-weight: 800;
+    margin-bottom: -10px;
+}
+
+.select-button {
+    font-weight: 500;
+    font-size: large;
+    margin-bottom: 20px;
+    margin-top: -10px;
+    width: 100px;
+}
+
+.col-container {
+    display: flex;
+    justify-content: center;;
+}
+
+@media (max-width: 850px) {
+
+    .col-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col {
+        width: 50%;
+        min-width: 300px;
+    }
+}
+
+footer {
+    margin-top: 20px;
+    margin-bottom: 0;
+    background: #d4d4d4;
+    padding: 5px 0;
+    width: 80%;
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.footer-right-align {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #d4d4d4;
+}
+
+
+.footer-element {
+    margin: 5px 20px;
+    background-color: #d4d4d4;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+footer a:visited {
+    color: black;
+    background-color: #d4d4d4;
+    text-decoration: none;
+}
+
+header a:visited {
+    color: black;
+}
+
+@media (max-width: 1200px) {
+    footer {
+        width: 100%;
+    }
+}
+
+@media (max-width: 670px) {
+    .nav-bar {
+        flex-direction: column;
+    }
+    .nav-link {
+        margin: 0px;
+    }
+    #intro {
+        margin-top: 90px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    #intro {
+        margin-top: 120px;
+    }
+    .icon {
+        display:none;
+    }
+    .next-to-icon {
+        margin-left: auto;
+        width: 100%;
+        text-align: center;
+    }
+    
+}
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+<body>
+    <header id="header">
+            <img id="header-img" src="original_trombones.png" height="40" width="320" alt="Original Trombones Logo"/>
+            <nav id="nav-bar" class="nav-bar">
+                <div id="nav-link" class="nav-link"><a href=#first-row>Features</a></div>
+                <div id="nav-link" class="nav-link"><a href=#video>How It Works</a></div>
+                <div id="nav-link" class="nav-link"><a href=#first-col>Pricing</a></div>
+            </nav>
+    </header>
+
+
+    <h3 id="intro">Handcrafted, home-made masterpieces</h3>
+    <form action="https://www.freecodecamp.com/email-submit">
+            <input id="email" type="email" name="email" placeholder="Enter your email address" required/>
+            <button id="submit" class="button" type="submit">GET STARTED</button>
+    </form>
+
+
+    <div id="first-row" class="row">
+        <div id="icon-1" class="icon"><img src="fireplace-24px.svg" height=auto width=50 alt="Fire Place"/></div>
+        <div class="next-to-icon">
+            <h3>Premium Materials</h3>
+            <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
+        </div>
+    </div>
+    <div id="second-row" class="row">
+        <div id="icon-2" class="icon"><img src="local_shipping-24px.svg" height=auto width=50 alt="Shipping"/></div>
+        <div class="next-to-icon">
+            <h3>Fast Shipping</h3>
+            <p>We make sure you receive your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied.</p>
+        </div>
+    </div>
+    <div id="third-row" class="row">
+        <div id="icon-3" class="icon"><img src="battery_charging_full-24px.svg" height=auto width=50 alt="Battery"/></div>
+        <div class="next-to-icon">
+            <h3>Quality Assurance</h3>
+            <p>For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.</p>
+        </div>
+    </div>
+
+    <div id="video">
+        <iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/y8Yv4pnO7qc?controls=0" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+        </iframe>
+    </div>
+
+
+
+    <div class="col-container">
+        <div id="first-col" class="col">
+            <h3 class="item">TENOR TROMBONE</h3>
+            <div class="price">$600</div>
+            <ul>
+                <li>ABS case included</li>
+                <li>Bore of 12.5mm</li>
+                <li>Bell size of 235mm</li>
+                <li>Lock for secure holding</li>
+            </ul>
+            <button type="submit" class="button select-button">SELECT</button>
+        </div>
+        <div id="second-col" class="col">
+            <h3 class="item">BASS TROMBONE</h3>
+            <div class="price">$900</div>
+            <ul>
+                <li>Double rotary</li>
+                <li>Bore of 14.3mm</li>
+                <li>Bell size of 242mm</li>
+                <li>Clear Lacquer Finish</li>
+            </ul>
+            <button type="submit" class="button select-button">SELECT</button>
+        </div>
+        <div id="third-col" class="col">
+            <h3 class="item">VALVE TROMBONE</h3>
+            <div class="price">$1200</div>
+            <ul>
+                <li>Plays similar to a Trumpet</li>
+                <li>Great for Jazz Bands</li>
+                <li>Hand slide</li>
+                <li>Independent Hagmann valve</li>
+            </ul>
+            <button type="submit" class="button select-button">SELECT</button>
+        </div>
+    </div>
+    
+
+</body>
+
+<footer>
+    <div class="footer-right-align">
+        <div class="footer-element"><a href=#>Privacy</a></div>
+        <div class="footer-element"><a href=#>Terms</a></div>
+        <div class="footer-element"><a href=#>Contact</a></div>
+    </div>  
+    <div class="footer-right-align footer-element">Copyright 2019, Original Trombones</div>
+</footer>

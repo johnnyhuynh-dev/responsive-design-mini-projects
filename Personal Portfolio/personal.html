@@ -1,0 +1,428 @@
+<style>
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+    font-weight: 500;
+    --main-red: #C62C40;
+    --start-grey: #343539;
+    --end-grey: #1D1D1F;
+    --light-grey: #424242;
+    --main-blue: #44567E;
+}
+
+img {
+    display: block;
+}
+
+span {
+    display: inline-block;
+}
+
+.center-flexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-font {
+    font-size: 60px;
+    font-weight: 800;
+    color: white;
+}
+
+.medium-font {
+    font-size: 30px;
+    font-weight: 400;
+    color: white;
+}
+
+.small-font {
+    font-size: 20px;
+    font-weight: 100;
+    color: white;
+}
+
+
+
+/* navigation bar style */
+
+a {
+    display: block;
+    font-size: x-large;
+    text-decoration: none;
+}
+
+#nav-bar {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    background-color: var(--main-red);
+    position: fixed;
+    width: 100%;
+}
+
+a.nav-link:hover {
+    background-color: var(--main-blue);
+}
+
+a.nav-link {
+    padding: 15px 20px;
+    color: white;
+    transition: background-color, 0.3s;
+    border-style: none;
+
+}
+
+
+/* welcome section style */
+
+section#welcome-section {
+    flex-direction: column;
+    height: 100vh; 
+    background-image: linear-gradient(90deg, var(--start-grey), var(--end-grey));
+}
+
+#welcome-section div {
+    color: #C62C40;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#welcome-section h1 {
+    text-align: center;
+}
+
+.in-the-box {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: white;
+}
+
+
+/* Style for Projects section */
+
+section#projects {
+    background-color: #44567E;
+}
+
+#projects h1 {
+    font-size: 40px;
+    font-weight: 900;
+    padding: 70px;
+}
+
+
+.project-title {
+    display: grid;
+    margin-left: 15px;
+    margin-right: 15px;
+    grid-template-columns: repeat(3, minmax(400px, 450px));
+    grid-template-rows: repeat(2, auto);
+    justify-content: center;
+    gap: 40px 40px;
+}
+
+.grid-item {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.shadow {
+    box-shadow: 1px 1px 5px var(--light-grey);
+    border-style: none;
+}
+
+.project-name {
+    background-color: var(--light-grey);
+    flex: 0 1 75px;
+}
+.project-image > img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.project-name > span {
+    color: orange;
+    margin: 3px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+a.grid-item:hover span {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+@media (max-width: 1350px) {
+    .project-title {
+        grid-template-columns: repeat(2, minmax(400px, 500px));
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .project-image > img {
+        height: 450px;
+    }
+}
+
+@media (max-width: 950px) {
+    .project-title {
+        grid-template-columns: repeat(1, minmax(300px, 650px));
+        grid-template-rows: repeat(6, auto);
+    }
+
+    .project-image > img {
+        height: 350px;
+    }
+}
+
+
+
+/* Show All button */
+#profile-link {
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+#profile-link a {
+    font-weight: 300;
+    padding: 5px 20px;
+    background-color: var(--light-grey);
+    color: white;
+    transition: background-color 0.5s;
+}
+
+#profile-link a:hover {
+    background-color: var(--main-red);
+}
+
+
+@keyframes move-right {
+    from {left: 0px;}
+    to {left: 5px;}
+}
+
+@keyframes move-left {
+    from {left: 5px;}
+    to {left: 0px;}
+}
+
+#profile-link a span {
+    animation-name: move-left;
+    animation-duration: 0.5s;
+    position: relative;
+}
+
+#profile-link a:hover span {
+    animation-name: move-right;
+    animation-duration: 0.5s;
+    position: relative;
+    animation-fill-mode: forwards;
+}
+
+
+
+/* Let's work together section */
+
+@keyframes contact-item-down {
+    from {top: 0px;}
+    to {top: 10px;}
+}
+
+@keyframes contact-item-up {
+    from {top: 10px;}
+    to {top: 0px;}
+}
+
+
+i {
+    font-size: 35px;
+    color: white;
+}
+
+
+.icon-name {
+    font-size: 25px;
+    color: white;
+    margin-left: 5px;
+}
+
+.contact-item {
+    margin: 10px;
+    padding: 5px;
+    position: relative;
+    animation-name: contact-item-up;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.contact-item:hover {
+    animation-name: contact-item-down;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+
+.contact-box {
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+#call-to-action h1 {
+    text-align: center;
+}
+
+
+section#call-to-action {
+    height: 85vh;
+    background-color: var(--light-grey);
+    flex-direction: column;
+}
+
+/* Style for footer */
+
+
+footer.center-flexbox {
+    background-color: var(--light-grey);
+    border-top: solid;
+    border-top-color: var(--main-red);
+    height: 10vh;
+    justify-content: space-evenly;
+
+}
+
+footer div {
+    font-size: 18px;
+    color: white;
+    margin-left: 20px;
+}
+
+
+</style>
+
+
+
+<head>
+    <script src="https://kit.fontawesome.com/0750857932.js" crossorigin="anonymous"></script>
+</head>
+
+<div id="nav-bar">
+    <a class="nav-link" href="#welcome-section">About</a>
+    <a class="nav-link" href="#projects">Work</a>
+    <a class="nav-link" href="#call-to-action">Contact</a>
+</div>
+
+<section id="welcome-section" class="center-flexbox">
+    <h1 class="big-font in-the-box">Hey I am Johnny . . . </h1>
+    <div class="medium-font in-the-box">. . . a web developer</div>
+</section>
+
+<section id="projects">
+    <h1 class="big-font center-flexbox"><u>These are some of my projects</u></h1>
+
+    <div class="project-title">
+        <a class="grid-item shadow" href="https://codepen.io/freeCodeCamp/full/zNqgVx" target="_blank">
+            <div class="project-image">
+                <img src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/images/tribute.jpg" alt="tribute-page"/>
+            </div>
+            <div class="project-name center-flexbox small-font"><span><</span>Tribute Page<span>/></span></div>
+        </a>
+
+        <a class="grid-item shadow" href="https://codepen.io/freeCodeCamp/full/qRZeGZ" target="_blank">
+            <div class="project-image">
+                <img src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/images/random-quote-machine.png" alt="random-quote"/>
+            </div>
+            <div class="project-name center-flexbox small-font"><span><</span>Random Quote Machine<span>/></span></div>
+        </a>
+
+        <a class="grid-item shadow" href="https://codepen.io/freeCodeCamp/full/wgGVVX" target="_blank">
+            <div class="project-image">
+                <img src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/images/calc.png" alt="calculator"/>
+            </div>
+            <div class="project-name center-flexbox small-font"><span><</span>JavaScript Calculator<span>/></span></div>
+        </a>
+
+        <a class="grid-item shadow" href="https://codepen.io/freeCodeCamp/full/mVEJag" target="_blank">
+            <div class="project-image">
+                <img src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/images/map.jpg" alt="data-map"/>
+            </div>
+            <div class="project-name center-flexbox small-font"><span><</span>Map Data Across Global<span>/></span></div>
+        </a>
+
+        <a class="grid-item shadow" href="https://codepen.io/freeCodeCamp/full/wGqEga" target="_blank">
+            <div class="project-image">
+                <img src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/images/wiki.png" alt="wikipedia-search"/>
+            </div>
+            <div class="project-name center-flexbox small-font"><span><</span>Wikipedia Search<span>/></span></div>
+        </a>
+
+        <a class="grid-item shadow" href="https://codepen.io/freeCodeCamp/full/KzXQgy" target="_blank">
+            <div class="project-image">
+                <img src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/images/tic-tac-toe.png" alt="tic-tac-toe"/>
+            </div>
+            <div class="project-name center-flexbox small-font"><span><</span>Tic Tac Toe Game<span>/></span></div>
+        </a>
+    </div>
+
+
+
+<div id="profile-link" class="center-flexbox">
+    <a class="shadow" href="https://codepen.io/johnnyhuynhmq/pens/public">Show All <span>></span></a>
+</div>
+</section>
+
+
+
+<section id="call-to-action" class="center-flexbox">
+    <h1 class="big-font">Let's work together...</h1>
+    <div class="small-font">How do you take your coffee?</div>
+    <div class="contact-box center-flexbox">
+
+        <a class="contact-item center-flexbox"  href="https://www.facebook.com/freecodecamp" target="_blank">
+            <i class="fab fa-facebook-square"></i>
+            <div class="icon-name">Facebook</div>
+        </a>
+
+        <a class="contact-item center-flexbox" href="https://github.com/freecodecamp" target="_blank">
+            <i class="fab fa-github"></i>
+            <div class="icon-name">GitHub</div>
+        </a>
+
+        <a class="contact-item center-flexbox" href="https://twitter.com/freecodecamp" target="_blank">
+            <i class="fab fa-twitter-square"></i>
+            <div class="icon-name">Twitter</div>
+        </a>
+
+        <a class="contact-item center-flexbox" href="mailto: example@gmail.com">
+            <i class="fas fa-envelope"></i>
+            <div class="icon-name">Send an email</div>
+        </a>
+
+        <a class="contact-item center-flexbox" href="tel:0430858593">
+            <i class="fas fa-mobile-alt"></i>
+            <div class="icon-name">Call me</div>
+        </a>
+
+    </div>
+</section>
+
+<footer class="center-flexbox">
+    <div>**This is just a fake portfolio. All the projects and contact details given are not real.</div>
+    <div>© Created by Johnny Huynh</div>
+</footer>
+
+
+
+
+
+

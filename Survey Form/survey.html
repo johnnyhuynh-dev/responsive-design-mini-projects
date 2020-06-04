@@ -1,0 +1,217 @@
+<html>
+
+    <style>
+
+    @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        width: 100%; 
+        height: 100%;
+        background-image: linear-gradient(
+            115deg,
+            rgba(58, 58, 158, 0.8),
+            rgba(136, 136, 206, 0.7)),
+            url(https://raw.githubusercontent.com/lasjorg/fcc-form-example-image/master/67103817-7c51e200-f18b-11e9-975f-f74561336a9a-lj.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        
+
+    }
+
+    #mainform {
+        background-color: #282948;
+        font-family: Poppins;
+        color: white;
+        font-weight: 500;
+        padding: 10px;
+        border-radius: 4px;
+
+    }
+
+    h1 {
+        font-family: Poppins;
+        text-align: center;
+        margin-bottom: -20px;
+        color: white;
+    }
+
+    p {
+        margin: 5px;
+        font-family: Poppins;
+        font-weight: 300;
+    }
+
+    #description {
+        text-align: center;
+        margin: 20px;
+        color: white;
+
+    }
+
+
+    button {
+        color: rgb(255, 255, 255);
+        background-color: rgb(76, 199, 76);
+        border-style: none;
+        width: 100%;
+        height: 2.5em;
+        margin-bottom: 20px;
+        cursor: pointer;
+
+    }
+
+    #name, #email, #number, select {
+        display: block;
+        font-family: Poppins;
+        font-weight: 300;
+        margin: 5px;
+        border-radius: 4px;
+        height: 2.5em;
+        width: 100%;
+        max-width: 600px;
+        padding-left: 10px;
+        border-style: solid;
+    }
+
+    textarea {
+        width: 100%;
+        font-family: Poppins;
+        font-weight: 300;
+        height: 5em;
+        padding-left: 10px;
+    }
+
+    fieldset {
+        border-style: none;
+    }
+
+    .centerthings {
+        width: 60%;
+        max-width: 600px;
+        margin: 5px auto;
+    }
+
+    @media (max-width: 600px) {
+        .centerthings {
+            width: 90%;
+        }
+    }
+
+
+    </style>
+
+
+
+    <header>
+        <h1 id="title">freeCodeCamp Survey Form</h1>
+        <p id="description"><i>Thank you for taking the time to help us improve the platform</i></p>
+    </header>
+    <body>
+        <div id="mainform" class="centerthings">
+            <form id="survey-form">
+                <fieldset>
+                    <label for="name" id="name-label">Name
+                        <input name="fullname" id="name" required type="text" placeholder="Enter your name"/>
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <label for="email" id="email-label">Email
+                        <input name="email" id="email" required type="email" placeholder="Enter your email"/>
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <label for="number" id="number-label">Age (Optional)
+                        <input name="age" id="number" type="number" min="10" max="99" placeholder="Age"/>
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <label for="dropdown">Which option best describes your current role?
+                        <select name="roles" id="dropdown">
+                            <option disabled selected>Select current role</option>
+                            <option value="Student">Student</option>
+                            <option value="FullTimeJob">Full Time Job</option>
+                            <option value="FullTimeLearner">Full Time Learner</option>
+                            <option value="PreferNotToSay">Prefer not to say</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <p>Would you recommend freeCodeCamp to a friend?</p>
+                    <div class="radiocheck">
+                        <label for="definitely">
+                            <input type="radio" id="definitely" name="reckon" value="Definitely"/>Definitely
+                        </label></br>
+                        <label for="maybe">
+                            <input type="radio" id="maybe" name="reckon" value="Maybe"/>Maybe
+                        </label></br>
+                        <label for="notsure">
+                            <input type="radio" id="notsure" name="reckon"  value="Notsure"/>Not sure
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <label for="favorite">What is your favorite feature of freeCodeCamp?
+                        <select name="favorite" id="favorite">
+                            <option disabled selected>Select an option</option>
+                            <option value="Challenges">Challenges</option>
+                            <option value="Projects">Projects</option>
+                            <option value="Community">Community</option>
+                            <option value="Open Source">Open Source</option>
+                        </select>
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <p>What would you like to see improved? (Check all that apply)</p>
+                    <label for="frontend">
+                        <input type="checkbox" id="frontend" name="improve" value="frontend"/>Front-end Projects
+                    </label>
+                    <label for="backend"></br>
+                            <input type="checkbox" id="backend" name="improve" value="backend"/>Back-end Projects
+                    </label>
+                    <label for="dataviz"></br>
+                        <input type="checkbox" id="dataviz" name="improve" value="dataviz"/>Data Visualization
+                    </label>
+                    <label for="chal"></br>
+                        <input type="checkbox" id="chal" name="improve" value="challenges"/>Challenges
+                    </label>
+                    <label for="opensource"></br>
+                        <input type="checkbox" id="opensource" name="improve" value="openSource"/>Open Source Community
+                    </label>
+                    <label for="gitter"></br>
+                        <input type="checkbox" id="gitter" name="improve" value="gitter"/>Gitter help rooms
+                    </label>
+                    <label for="video"></br>
+                        <input type="checkbox" id="video" name="improve" value="video"/>Videos
+                    </label>
+                    <label for="meetup"></br>
+                        <input type="checkbox" id="meetup" name="improve" value="meetup"/>City Meetups
+                    </label>
+                    <label for="wiki"></br>
+                        <input type="checkbox" id="wiki" name="improve" value="wiki"/>Wiki
+                    </label>
+                    <label for="forum"></br>
+                        <input type="checkbox" id="forum" name="improve" value="forum"/>Forum
+                    </label>
+                    <label for="additional"></br>
+                        <input type="checkbox" id="additional" name="improve" value="additional"/>Additional Courses
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <p>Any comments or suggestions?</p>
+                    <textarea name="comments" placeholder="Enter your comments here..."></textarea>
+                </fieldset>
+                <fieldset>
+                    <button type="submit" id="submit">Submit</button></a>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>
+
